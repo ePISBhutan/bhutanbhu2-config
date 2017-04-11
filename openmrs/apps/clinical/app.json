@@ -1,0 +1,125 @@
+{
+    "id": "bahmni.clinical",
+    "extensionPoints": [
+        {
+            "id": "org.bahmni.clinical.consultation.board",
+            "description": "Bahmni Clinical Consultation Page"
+        },
+        {
+            "id": "org.bahmni.clinical.conceptSetGroup.*",
+            "description": "Define conceptsets part of a conceptset group"
+        },
+        {
+            "id": "org.bahmni.clinical.orders",
+            "description": "Bahmni Orders Page"
+        },
+        {
+            "id": "org.bahmni.patient.search",
+            "description": "Bahmni Patient search, lookups Page"
+        }
+    ],
+    "contextModel": [
+        "patientUuid",
+        "visitUuid"
+    ],
+    "config": {
+        "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
+        "quickPrints":false,
+
+        "printConfig": {
+          "visitSummaryPrint": {
+            "showChart": false
+          },
+          "opdSummaryPrint": {
+            "showChart": false
+          }
+        },
+        "networkConnectivity" : {
+            "showNetworkStatusMessage": true,
+            "networkStatusCheckInterval": 5000,
+            "locales" : [
+                { "locale" : "fr", "css" : "offline-language-french"},
+                { "locale" : "es", "css": "offline-language-spanish"},
+                { "locale" : "pt", "css": "offline-language-portuguese-brazil"}
+            ]
+        },
+    	"diagnosisStatus": "Inactive",
+            "program": {
+                "patientInformation": {
+                    "ageLimit": 100
+                }
+            },
+            "patientContext": {
+        		"programAttributes": [
+            		"Id_Number",
+            		"Doctor",
+            		"Stage"
+        		],
+        		"personAttributes": [
+            		
+        		],
+        		"additionalPatientIdentifiers": [
+           			
+       		],
+        		"preferredIdentifier": "Id_Number"
+    	},
+        "obsIgnoreList": [
+            "REGISTRATION FEES",
+            "COMMENTS",
+            "Patient file"
+        ],
+        "otherInvestigationsMap": {
+            "Radiology": "Radiology Order",
+            "Endoscopy": "Endoscopy Order"
+        },
+        "allowConsultationWhenNoOpenVisit": false,
+        "defaultVisitType": "OPD",
+        "visitTypeForRetrospectiveEntries": "OPD",
+        "maxConceptSetLevels": 3,
+        "allowOnlyCodedDiagnosis": false,
+        "conceptSetUI": {
+            "Chief Complaint Data": {
+                "autocomplete":true,
+                "codedConceptName":"Chief Complaint",
+                "nonCodedConceptName":"Non-Coded Chief Complaint",
+                "durationRequired": false,
+                "allowAddMore": true
+            },
+
+             "Follow up Date": {
+                "allowFutureDates": true
+            },
+
+
+            "Referral Form, Referred From":{
+                "autocomplete" : true,
+                "answersConceptName":"Hospital Names"
+
+            },
+            "Referral Form, Referred To":{
+                "autocomplete" : true,
+                "answersConceptName":"Hospital Names"
+            },
+            "Left Upper Jaw": {
+                "multiSelect": true
+            },
+            "Right Upper Jaw": {
+                "multiSelect": true
+            },
+            "Left Lower Jaw": {
+                "multiSelect": true
+            },
+            "Right Lower Jaw": {
+                "multiSelect": true
+            },
+            "Vitals":{
+                "hideAbnormalButton" : true
+            }
+        },
+        "visitPage": {
+            "observationDisplay": {
+                "conceptNames": []
+            }
+        }
+    }
+}

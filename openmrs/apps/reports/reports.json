@@ -1,0 +1,229 @@
+{
+   "visitCountAll": {
+       "name": "Visit Count Report",
+       "type": "aggregation",
+       "config": {
+           "report":{
+               "type": "visits",
+                "config": {
+                    "applyDateRangeFor": "visitStartDate"
+                }
+           },
+           "rowGroups": [
+               "Visit Type"
+           ],
+           "distinctGroups": [
+               "Visit Id"
+           ],
+            "showTotalRow":true
+       }
+   },
+   "visitCountNB": {
+    "name": "Visit Count Report for Non Bhutanese",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/visitCountNB.sql"
+    }
+  },
+  "visitCountGender": {
+         "name": "Visit Count Report Based on Gender",
+         "type": "aggregation",
+         "config": {
+             "report":{
+                 "type": "visits",
+                  "config": {
+                      "applyDateRangeFor": "visitStartDate",
+                      "patientAttributes": ["Gender"]
+                  }
+             },
+             "rowGroups": [
+                 "Visit Type"
+             ],
+              "columnGroups": [
+                 "Gender"
+             ],
+             "distinctGroups": [
+                 "Patient Identifier"
+             ],
+              "showTotalRow":true,
+              "showTotalColumn":true
+
+         }
+     },
+  "morbidityReportOpdWithDeathCount": {
+    "name": "Morbidity Report For OPD",
+    "type": "concatenated",
+    "config": {
+        "reports": [
+                      {
+                         "name": "Morbidity Report For OPD",
+                        "type": "diagnosisCount",
+                        "config": {
+                          "dateRangeRequired": true,
+                          "applyDateRangeFor":"diagnosisDate",
+                          "concept": "Diagnosis Set of Sets",
+                          "ageGroupName": "Diagnosis Age Group",
+                          "visitTypes":["OPD"],
+                          "rowsGroupBy": ["header_concept_name","leaf_concept_name"],
+                         "columnsGroupBy": ["gender","agegroup_name"]
+                         }
+                       },
+                       { "name": "Morbidity Dead Count",
+                        "type": "MRSGeneric",
+                        "config": {
+                          "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/opdMorbidityDeadCount.sql"
+                        }
+                      },
+                      { "name": "Morbidity Refer Count",
+                            "type": "MRSGeneric",
+                            "config": {
+                              "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/opdMorbidityRefInOut.sql"
+                            }
+                      }
+        ],
+        "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/MacroTemplates/MorbidityReportForOPD.xls"
+    }
+  },
+    "morbidityReportIpdWithDeathCount": {
+    "name": "Morbidity Report For IPD",
+    "type": "concatenated",
+    "config": {
+        "reports": [
+                {
+                      "name": "Morbidity Report For IPD",
+                      "type": "diagnosisCount",
+                      "config": {
+                        "dateRangeRequired": true,
+                        "applyDateRangeFor":"diagnosisDate",
+                        "concept": "Diagnosis Set of Sets",
+                        "ageGroupName": "Diagnosis Age Group",
+                        "visitTypes":["IPD"],
+                        "rowsGroupBy": ["header_concept_name","leaf_concept_name"],
+                       "columnsGroupBy": ["gender","agegroup_name"]
+                       }
+                     },
+                     { "name": "Morbidity Dead Count",
+                      "type": "MRSGeneric",
+                      "config": {
+                        "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/ipdMorbidityDeadCount.sql"
+                      }
+                      },
+                      { "name": "Morbidity Refer Count",
+                            "type": "MRSGeneric",
+                            "config": {
+                              "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/ipdMorbidityRefInOut.sql"
+                            }
+                      }
+        ],
+        "macroTemplatePath" : "/var/www/bahmni_config/openmrs/apps/reports/MacroTemplates/MorbidityReportForIPD.xls"
+    }
+  },
+    "admissionCountNB": {
+    "name": "Admission Count Report for Non Bhutanese",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/nbAdmissionCount.sql"
+    }
+  },
+
+    "Delivery_Count": {
+       "name": "No of Delivery",
+       "type": "aggregation",
+       "config": {
+                    "report":{
+                    "type": "observations", 
+                    "config": {
+        "patientAttributes": ["caste","class","education","occupation","primaryContact"],
+        "patientAddresses": ["address3","city_village"],
+        "visitAttributes": ["Visit Status","Admission Status"],
+        "showVisitInfo": true,
+        "showProvider": true,
+        "conceptNamesToFilter": ["DR,Sex"],
+        "conceptNameDisplayFormat": "shortNamePreferred",
+        "locationTagsToFilter": [],
+        "programsToFilter": [],
+        "applyDateRangeFor": "obsDate",
+        "visitTypesToFilter": []
+    }
+},
+"rowGroups":["Value"],
+           
+           "distinctGroups": [
+               "Patient Identifier"
+           ],
+            "showTotalRow":false,
+            "showTotalColumn":false
+       }
+
+ },
+   "Concatenated Daily Census Report": {
+    "name": "Daily Census Report",
+    "type": "concatenated",
+    "config": {
+        "reports": [
+        {
+       "name": "Daily Census Report Admission/Discharge",
+    "type": "VisitAggregateCount",
+    "config": {
+               "type": "VisitAggregateCountReport",
+               "locationTagNames": ["Admission Location", "Visit Location", "Login Location"],
+               "visitTypes": "'IPD','OPD','EMERGENCY','Lab','MCH','Dental','ENT'"
+    }
+    },
+            {
+            "name": "Daily Census Report Referred Out",
+       "type": "aggregation",
+       "config": {
+           "report":{
+               "type": "observations",
+               "config": {
+                   "conceptNamesToFilter":["Referral Form"],
+                   "showVisitInfo" : true,
+                   "forDataAnalysis": true,
+                       "applyDateRangeFor": "obsDate"
+               }
+           },
+           "rowGroups": ["Visit Type"],
+           "distinctGroups": [
+               "Patient Identifier"
+           ],
+            "showTotalRow":false,
+            "showTotalColumn":false
+       }
+            },
+
+        { "name": "Daily Census Report Referred In",
+         "type": "aggregation",
+           "config": {
+           "report":{
+               "type": "observations",
+               "config": {
+                   "conceptNamesToFilter":["Refer In Details"],
+                   "showVisitInfo" : true,
+                   "forDataAnalysis": true,
+                       "applyDateRangeFor": "obsDate"
+               }
+           },
+           "rowGroups": ["Visit Type"],
+           "distinctGroups": [
+               "Patient Identifier"
+           ],
+            "showTotalRow":false,
+            "showTotalColumn":false
+       }
+            }
+
+        ]
+    }
+},
+
+"LengthOfStay": {
+    "name": "Length of Stay Per Patient",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/ipdLengthOfStay.sql"
+    }
+}
+
+
+}

@@ -1,0 +1,143 @@
+{
+    "general":{
+        "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
+        "displayByDefault": true,
+        "printing": {
+            "title": "Bahmni",
+            "header": "Visit",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "defaultSections": true,
+        "sections": {
+            "pivotTable":{
+                "type": "pivotTable",
+                "displayOrder": 0,
+                "title": "Vitals Flowsheet",
+                "config": {
+                    "groupBy": "encounters",
+                    "obsConcepts": [
+                        "Pulse",
+                        "Diastolic",
+                        "Systolic",
+                        "Temperature",
+                        "RR",
+                        "SPO2",
+                        "Height",
+                        "WEIGHT",
+                        "M/C Days"
+                    ],
+                    "labConcepts": ""
+                }
+            },
+            "pacsOrders":{
+                "type":"pacsOrders",
+                "displayOrder": 1,
+                "translationKey": "PACS_ORDERS_VISIT_PAGE_KEY",
+                "config":{
+                    "orderType": "Radiology Order"
+                }
+            }
+        }
+    },
+    "dischargeSummary":{
+        "translationKey": "DASHBOARD_TAB_DISCHARGE_SUMMARY_KEY",
+        "printing": {
+            "title": "Bahmni",
+            "header": "Discharge Certificate",
+            "logo": "../images/bahmniLogo.png"
+        },
+        "sections": {
+            "PatientInformation":{
+                "type": "patientInformation",
+                "displayOrder": 0,
+                "config": {
+                    "title": "PatientInformation",
+                    "patientAttributes": [],
+                    "addressFields": []
+                }
+            },
+            "admissionDetails":{
+                "type": "admissionDetails",
+                "displayOrder": 1,
+                "config": {
+                    "showDetailsButton": true,
+                    "translationKey": "DISCHARGE_SUMMARY_ADMISSION_DETAILS_KEY"
+
+                }
+            },
+  
+            "diagnoses":{
+                "type": "diagnosis",
+                "displayOrder": 4,
+                "config": {
+                    "translationKey" : "DISCHARGE_SUMMARY_DIAGNOSIS_KEY",
+                    "showCertainty": false,
+                    "showOrder": false,
+                    "showDetailsButton": true
+                }
+            },
+            "clinicalNotes":{
+                "type": "observation",
+                "displayOrder": 5,
+                "translationKey": "DISCHARGE_SUMMARY_CLINICAL_NOTES_KEY",
+                "config": {
+                    "conceptNames": [
+                        "Discharge Summary"
+                      
+                    ],
+                    "scope": "latest",
+                    "numberOfVisits": "1"
+                }
+            },
+            "labInvestigations":{
+                "type": "investigationResult",
+                "displayOrder": 6,
+                "config": {
+                    "translationKey":"LAB_INVESTIGATIONS_KEY",
+                    "showChart": false,
+                    "showTable": true,
+                    "showNormalLabResults": true,
+                    "showCommentsExpanded": true,
+                    "showAccessionNotes": true,
+                    "numberOfVisits": 10,
+                    "initialAccessionCount": 1,
+                    "latestAccessionCount": 1
+                }
+            },
+            "Treatments": {
+                "type": "treatment",
+                "displayOrder": 6,
+                "config": {
+                    "translationKey": "VISIT_TITLE_TREATMENTS_KEY",
+                    "showFlowSheet": true,
+                    "showListView": true,
+                    "showOtherActive": false,
+                    "showDetailsButton": true,
+                    "showRoute": true,
+                    "showDrugForm": true,
+                    "showProvider":false
+                }
+            }
+
+        }
+    },
+    "orders":{
+      "translationKey": "DASHBOARD_TAB_ORDERS_KEY",
+      "sections": {
+          "Radiology Orders": {
+              "type": "order",
+              "displayOrder": 0,
+              "translationKey": "Radiology Orders",
+              "config": {
+                  "translationKey": "Radiology Orders",
+                  "name": "ordersControl",
+                  "orderType": "Radiology Order",
+                  "conceptNames": [
+                      "Summary"
+                  ]
+              }
+          }
+      }
+
+    }
+}

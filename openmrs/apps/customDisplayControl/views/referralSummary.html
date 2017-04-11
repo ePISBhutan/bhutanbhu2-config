@@ -1,0 +1,43 @@
+<html>
+<head>
+<link rel="stylesheet" href="/bahmni_config/openmrs/apps/customDisplayControl/css/print/custom-printref.css" media="print"/>
+</head>
+<body>
+	<div>
+	    <center><span class="referral-form custom-print-center"><h1><strong>Patient Referral Sheet</strong></h1></span></center>
+		<br><br><br><br>
+		<span class="increased-font">
+			<strong>Referred From : </strong> {{obsRefFrom.valueAsString}}
+		</span>
+		<br><br>
+		<span class="increased-font">
+			<strong>Name : </strong> {{patient.name}} ({{patient.identifier}})
+		</span>
+		<span class="increased-font padding-span">
+			<strong>Age : </strong>{{patient.age}} Years / {{patient.gender}}
+		</span>
+		<br><br>
+		<span class="increased-font">
+			<strong>C/O : </strong>{{patient.FatherHusbandName.value}}
+		</span>
+		<br><br>
+		<span class="increased-font">
+			<strong>House No : </strong> {{patient.address.address2}}
+		</span>
+		<span class="increased-font padding-span">
+			<strong>Village : </strong>{{patient.address.cityVillage}}
+		</span>
+		<span class="increased-font padding-span">
+			<strong>Gewog : </strong>{{patient.address.address1}}
+		</span>
+		<span class="increased-font padding-span">
+			<strong>Dz : </strong>{{patient.address.countyDistrict}}
+		</span>
+		<br><br>
+		<span class="increased-font">
+			<strong>Referred To : </strong> {{obsRefTo.valueAsString}}
+		</span>
+		<br><br><br>
+	</div>
+</body>
+</html>

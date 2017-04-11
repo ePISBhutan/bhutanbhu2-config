@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/bahmni_config/openmrs/apps/registration/supplementalPaperLayout/css/print.css"/>
+
+<div class="center"><span >OPD CARD</span></div>
+<br>
+<hr>
+<div>
+    <div class="row">
+    
+        <div class="left">
+            <span class="label">Date:</span>
+            <span>{{today | date:'dd/MM/yyyy'}}</span>
+        </div>
+        <div class="right">
+            <span class="label">Registration No.:</span>
+            <span>{{patient.primaryIdentifier.identifier}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="left">
+            <span class="label">Name:</span>
+            <span>{{patient.givenName}} {{patient.middleName}} {{patient.familyName}}</span>
+        </div>
+        <div class="right">
+            <span class="label">Gender:</span>
+            <span>{{patient.gender}}</span>
+        </div> 
+    </div>
+     <div class="row">
+        <div class="left">
+            <span class="label">Age:</span>
+            <span>{{patient.age.years || "0"}} y</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="/bahmni_config/openmrs/apps/registration/registrationCardLayout/css/print.css"/>
+<table border="1" cellpadding="0" cellspacing="1" class="registrationCard-print-table">
+    <tbody>
+    <tr>
+        
+        <td class="print-table-left" valign="top">
+            <table>
+                <tr>
+                    <td class="logo">
+                        <p>
+                            <img src="/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/bahmni-icon.png" style="width: 12mm; height: 12mm; "/>
+                        </p>
+                    </td>
+                    <td class="print-table-right-header">
+                        <center><h4>
+                        {{ "REGISTRATION_INSTITUTE_NAME_TEXT_KEY" | translate }}
+                        </h4></center>
+                        <h4 class="print-center">{{ "REGISTRATION_INSTITUTE_REGISTERED_TEXT_KEY" |  translate }}</h4>
+                    </td>
+                    <td class="registrationCard-photo">
+                        <img ng-src="{{patient.image}}" style="width: 20mm; height: 20mm; "
+                             onerror="this.onerror=null;this.src='../images/blank.jpeg';"/>
+                    </td>
+                </tr>
+            </table>
+            <table class="registrationCard-details">
+                <tbody>
+                    <tr>
+              <center>  <img id="barcode" 
+                     jsbarcode-value="{{patient.primaryIdentifier.identifier}}"
+                     jsbarcode-width="2"
+                     jsbarcode-height="30"
+                     jsbarcode-margin="1"
+                     jsbarcode-displayValue="false"
+                     jsbarcode-textAlign="left"
+                     jsbarcode-textMargin=""
+                     jsbarcode-fontSize="2" /> <center/>
+                </tr>
+                <tr>
+                    <td class="registrationCard-details-name">
+                        <span class="hindi-text">Registration</span>
+                    </td>
+                    <td class="registrationCard-details-seperator"> :  </td>
+                    <td><span class="hindi-text">{{patient.primaryIdentifier.identifier}}</span> </td>
+                </tr>
+                <tr>
+                    <td class="registrationCard-details-name">
+                        <span class="hindi-text">Name</span>
+                    </td>
+                    <td class="registrationCard-details-seperator"> :  </td>
+                    <td>
+                        <span class="hindi-text">{{patient.givenName}} {{patient.middleName}} {{patient.familyName}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="registrationCard-details-name">
+                        <span class="hindi-text">DOB</span>
+                    </td>
+                    <td class="registrationCard-details-seperator"> :  </td>
+                    <td><span class="hindi-text">{{patient.birthdate|date}}</span> </td>
+                </tr>
+                <tr>
+                    <td class="registrationCard-details-name">
+                        <span class="hindi-text">Gender</span>
+                    </td>
+                    <td class="registrationCard-details-seperator"> :  </td>
+                    <td><span class="hindi-text">{{patient.gender}}</span> </td>
+                </tr>
+                <tr>
+                    <td class="registrationCard-details-name">
+                        <span class="hindi-text">Address</span>
+                    </td>
+                    <td class="registrationCard-details-seperator"> :  </td>
+                    <td><span class="hindi-text">{{patient.address.cityVillage}}, {{patient.address.address1}}, {{patient.address.countyDistrict}}</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript" src="/bahmni_config/openmrs/apps/JsBarcode.all.min.js"></script>
+<script>
+    (function() {
+        JsBarcode("#barcode").init();
+    })();
+</script>

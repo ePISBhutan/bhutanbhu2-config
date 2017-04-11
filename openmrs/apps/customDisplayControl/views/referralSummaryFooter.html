@@ -1,0 +1,17 @@
+<html>
+<head>
+<link rel="stylesheet" href="/bahmni_config/openmrs/apps/customDisplayControl/css/print/custom-printref.css" media="print"/>
+</head>
+<body>
+<br>
+<div class="footer-referralform">
+	<span class="increased-font">
+<strong>Referred For : </strong> {{obsRefFor.valueAsString}}</span>
+<br><br><br>
+    <span class="increased-font" class="fl">Signature</span> <br> <br> <br> <br><br>
+    <span class="increased-font" class="fl">{{obsRefFor.providers[0].name}}</span>
+    <br><br>
+    <span class="increased-font">Date : {{curDate |date:'dd-MM-yyyy'}}</span>
+</div><br><br>
+</body>
+</html>

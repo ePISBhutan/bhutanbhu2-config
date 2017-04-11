@@ -1,0 +1,112 @@
+{
+        "id": "bahmni.registration",
+        "instanceOf":"bahmni.template.registration",
+        "description": "Bahmni Patient Registration App",
+        "extensionPoints": [
+            {
+                "id": "org.bahmni.registration.patient.search.result.action",
+                "description": "Bahmni Patient Search Result Action"
+            },
+            {
+                "id": "org.bahmni.registration.patient.next",
+                "description": "After Bahmni Patient Registration, forward url configuration"
+            }
+        ],
+        "contextModel": [
+            "patientUuid",
+            "activeVisitUuid"
+        ],
+        "config" : {
+            "patientInformation": {
+                "NonBhutaneseInformation": {
+                    "title": "Non Bhutanese information",
+                    "translationKey": "Non Bhutanese information",
+                    "attributes": [
+                        "NonResidentialBhutaneseType",
+                        "PassportIdNumber"
+                    ]
+                },
+                "hidden": {
+                    "attributes": [
+                       
+                    ]
+                },
+                "defaults":  {
+                   
+                }
+            },
+            "addressHierarchy": {
+                "showAddressFieldsTopDown": false,
+                "strictAutocompleteFromLevel": "stateProvince"
+            },
+            "relationshipTypeMap": {
+                "Doctor":"provider",
+                "Parent":"patient"
+            },
+
+            "autoCompleteFields":[],
+            "defaultIdentifierPrefix": "PAR",
+            "defaultVisitType": "OPD",
+            "searchByIdForwardUrl": "/patient/{{patientUuid}}",
+            "showMiddleName": false,
+            "showBirthTime": false,
+            "showCasteSameAsLastNameCheckbox": false,
+            "printOptions": [
+                {
+                    "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
+                    "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print.html",
+                    "shortcutKey": "p"
+                },
+                {
+                    "translationKey": "REGISTRATION_PRINT_SUPPLEMENTAL_PAPER",
+                    "templateUrl": "/bahmni_config/openmrs/apps/registration/supplementalPaperLayout/print.html",
+                    "shortcutKey": "r"
+                }
+            ],
+            "conceptSetUI": {
+                "Refer In, Department referred to":{
+                "autocomplete" : true,
+                "answersConceptName":"Hospital Departments"
+                },
+                "Refer In, Referred From":{
+                "autocomplete" : true,
+                "answersConceptName":"Hospital Names"
+                },                
+                "FHS": {
+                    "buttonSelect": true
+                },
+                "defaults":{
+                    "FHS": "Present"
+                }
+            },
+            "fieldValidation" : {
+                "ContactNo" : {"pattern" : "[0-9]{7,10}", "errorMessage" : "Should be contain 8 digits"},
+                "familyName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
+                "givenName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
+                "middleName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"}
+            },
+            "patientSearchResults": {
+                "address": {
+                    "fields" : ["city_village"]
+                },
+                "personAttributes": {
+                    "fields": [ 
+                        "ContactNo",
+                        "FatherHusbandName"
+                    ]
+                }
+            },
+            "patientSearch": {
+                "address": {
+                    "label": "Village name",
+                    "placeholder": "Enter village name",
+                    "field": "city_village"
+                },
+                "customAttributes": {
+                    "label": "Contact no",
+                    "placeholder": "Contact no",
+                    "fields": ["ContactNo"]
+                }
+            }
+        }
+}
