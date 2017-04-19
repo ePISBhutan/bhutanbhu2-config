@@ -8,7 +8,7 @@
 # It can also be used to SCP into the vagrant box
 #####################################################################################################
 
-MACHINE_IP=192.168.33.13
+MACHINE_IP=192.168.33.54
 KEY_FILE=~/.vagrant.d/insecure_private_key
 TIMEOUT="-o ConnectTimeout=5"
 

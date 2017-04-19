@@ -5,5 +5,5 @@ source $PATH_OF_CURRENT_SCRIPT/vagrant/vagrant_functions.sh
 USER=bahmni
 
 run_in_vagrant -c "sudo rm -rf /var/www/bahmni_config"
-run_in_vagrant -c "sudo ln -s /bahmni/bhutan-config /var/www/bahmni_config"
+run_in_vagrant -c "sudo ln -s /bahmni/bhu_drukgyel_config/bhutanbhu2-config /var/www/bahmni_config"
 run_in_vagrant -c "sudo chown -h ${USER}:${USER} /var/www/bahmni_config"
