@@ -80,6 +80,47 @@
     "order": 2,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalPatientsSearchEYEPatients": {
+    "id": "bahmni.clinical.patients.search.EYEPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.EYEPatients",
+      "translationKey": "MODULE_LABEL_EYE_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Active",
+    "order": 3,
+    "requiredPrivilege": "app:clinical"
+  },
+    "bahmniClinicalPatientsSearchEntPatients": {
+    "id": "bahmni.clinical.patients.search.EntPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.EntPatients",
+      "translationKey": "MODULE_LABEL_ENT_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Active",
+    "order": 4,
+    "requiredPrivilege": "app:clinical"
+  },
+
+ "bahmniClinicalPatientsSearchDentalPatients": {
+    "id": "bahmni.clinical.patients.search.DentalPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.DentalPatients",
+      "translationKey": "MODULE_LABEL_DENTAL_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Active",
+    "order": 5,
+    "requiredPrivilege": "app:clinical"
+  },
+
     "bahmniClinicalPatientsSearchEmergencyPatients": {
     "id": "bahmni.clinical.patients.search.EmergencyPatients",
     "extensionPointId": "org.bahmni.patient.search",
@@ -90,9 +131,10 @@
       "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
     },
     "label": "Active",
-    "order": 3,
+    "order": 6,
     "requiredPrivilege": "app:clinical"
   },
+
   "bahmniClinicalPatientsSearchAllPatients": {
     "id": "bahmni.clinical.patients.search.allPatients",
     "extensionPointId": "org.bahmni.patient.search",
@@ -102,10 +144,9 @@
       "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
     },
     "label": "All",
-    "order": 4,
+    "order": 7,
     "requiredPrivilege": "app:clinical"
   },
-
   "bahmniClinicalConceptSetGroupObservationsHistory": {
     "id": "bahmni.clinical.conceptSetGroup.observations.history",
     "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
@@ -127,52 +168,6 @@
     },
     "order": 2,
     "requiredPrivilege": "app:clinical"
-  },
-  "bahmniClinicalConceptSetGroupObservationsSecondVitals": {
-    "id": "bahmni.clinical.conceptSetGroup.observations.secondVitals",
-    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
-    "type": "config",
-    "extensionParams": {
-      "conceptName": "Second Vitals",
-      "showIf": [
-        "var visitTypes = [];",
-        "if(visitTypes.length === 0) return true;",
-        "var visitTypeName = context.visitType ? context.visitType.name : null;",
-        "return visitTypes.indexOf(visitTypeName) !== -1;"
-      ]
-    },
-    "order": 3,
-    "requiredPrivilege": "app:clinical"
-  },
-  "bahmniClinicalConceptSetGroupObservationsObstetrics": {
-    "id": "bahmni.clinical.conceptSetGroup.observations.obstetrics",
-    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
-    "type": "config",
-    "extensionParams": {
-      "conceptName": "Obstetrics"
-    },
-    "order": 4,
-    "requiredPrivilege": "app:clinical"
-  },
-  "bahmniClinicalConceptSetGroupObservationsGynaecology": {
-    "id": "bahmni.clinical.conceptSetGroup.observations.gynaecology",
-    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
-    "type": "config",
-    "extensionParams": {
-      "conceptName": "Gynaecology"
-    },
-    "order": 5,
-    "requiredPrivilege": "app:clinical"
-  },
-  "bahmniClinicalConceptSetGroupObservationsDischargeSummary": {
-    "id": "bahmni.clinical.conceptSetGroup.observations.dischargeSummary",
-    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.observations",
-    "type": "config",
-    "extensionParams": {
-      "conceptName": "Discharge Summary"
-    },
-    "order": 6,
-    "requiredPrivilege": "Discharge Summary"
   },
   "bahmniClinicalBillingTreatment": {
     "id": "bahmni.clinical.billing.treatment",

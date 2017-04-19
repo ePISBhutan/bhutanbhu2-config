@@ -89,7 +89,7 @@
                         "Weight",
                         "BMI"
                     ],
-                    "numberOfVisits":2,
+                    "numberOfVisits":5,
                     "showDetailsButton":true,
                     "pivotTable":{  
 
@@ -112,7 +112,30 @@
                     "conceptNames":[  
                         "History and Examination"
                     ],
-                    "numberOfVisits":2,
+                    "numberOfVisits":5,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
+                }
+            },
+            "vitals":{  
+                "translationKey":"DASHBOARD_TITLE_VITALS_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":7,
+                "dashboardConfig":{  
+                    "showDetailsButton":true,
+                    "conceptNames":[  
+                        "vitals"
+                    ],
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{  
+                    "conceptNames":[  
+                        "vitals"
+                    ],
+                    "numberOfVisits":5,
                     "showDetailsButton":true,
                     "pivotTable":{  
 
@@ -123,13 +146,13 @@
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
                 "type":"radiology",
                 "showDetailsButton":true,
-                "displayOrder":7
+                "displayOrder":8
             },
             "radiologyOrders":{  
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-                "displayOrder":8,
+                "displayOrder":9,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Radiology Summary"
@@ -141,7 +164,7 @@
                 "orderType":"USG Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_USG_ORDERS_KEY",
-                "displayOrder":9,
+                "displayOrder":10,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "USG Report"
@@ -152,7 +175,7 @@
             "labResults":{  
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type":"labOrders",
-                "displayOrder":10,
+                "displayOrder":11,
                 "dashboardConfig":{  
                     "title":null,
                     "numberOfVisits":1,
@@ -169,13 +192,7 @@
             "programs":{  
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
-                "displayOrder":11
-            },
-            "admissionDetails":{  
-                "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
-                "type":"admissionDetails",
-                "displayOrder":12,
-                "showDetailsButton":true
+                "displayOrder":12
             },
             "visits":{  
                 "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
@@ -186,6 +203,12 @@
                     "maximumNoOfVisits":8,
                     "groupByVisits":true
                 }
+            },
+            "admissionDetails":{  
+                "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
+                "type":"admissionDetails",
+                "displayOrder":14,
+                "showDetailsButton":true
             }
         }
     },
