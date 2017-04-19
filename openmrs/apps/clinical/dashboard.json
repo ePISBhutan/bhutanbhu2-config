@@ -69,11 +69,32 @@
                     "showDetailsButton":true
                 }
             },
-            "radiology":{  
-                "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
-                "type":"radiology",
-                "showDetailsButton":true,
-                "displayOrder":5
+            "nutritionalValues":{  
+                "translationKey":"DASHBOARD_TITLE_NUTRITIONAL_VALUES_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":5,
+                "dashboardConfig":{  
+                    "conceptNames":[  
+                        "HEIGHT",
+                        "Weight",
+                        "BMI"
+                    ],
+                    "showDetailsButton":true,
+                    "scope":"latest"
+                },
+                "expandedViewConfig":{  
+                    "conceptNames":[  
+                        "HEIGHT",
+                        "Weight",
+                        "BMI"
+                    ],
+                    "numberOfVisits":2,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
+                }
             },
             "historyAndExaminations":{  
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY",
@@ -98,11 +119,17 @@
                     }
                 }
             },
+            "radiology":{  
+                "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
+                "type":"radiology",
+                "showDetailsButton":true,
+                "displayOrder":7
+            },
             "radiologyOrders":{  
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-                "displayOrder":7,
+                "displayOrder":8,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Radiology Summary"
@@ -114,7 +141,7 @@
                 "orderType":"USG Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_USG_ORDERS_KEY",
-                "displayOrder":8,
+                "displayOrder":9,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "USG Report"
@@ -125,7 +152,7 @@
             "labResults":{  
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type":"labOrders",
-                "displayOrder":9,
+                "displayOrder":10,
                 "dashboardConfig":{  
                     "title":null,
                     "numberOfVisits":1,
@@ -142,23 +169,23 @@
             "programs":{  
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
-                "displayOrder":10
-            },
-            "visits":{  
-                "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
-                "type":"visits",
-                "displayOrder":11,
-                "dashboardConfig":{  
-                    "title":null,
-                    "maximumNoOfVisits":8,
-                    "groupByVisits":true
-                }
+                "displayOrder":11
             },
             "admissionDetails":{  
                 "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                 "type":"admissionDetails",
                 "displayOrder":12,
                 "showDetailsButton":true
+            },
+            "visits":{  
+                "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
+                "type":"visits",
+                "displayOrder":13,
+                "dashboardConfig":{  
+                    "title":null,
+                    "maximumNoOfVisits":8,
+                    "groupByVisits":true
+                }
             }
         }
     },
