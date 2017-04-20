@@ -80,47 +80,6 @@
     "order": 2,
     "requiredPrivilege": "app:clinical"
   },
-  "bahmniClinicalPatientsSearchEYEPatients": {
-    "id": "bahmni.clinical.patients.search.EYEPatients",
-    "extensionPointId": "org.bahmni.patient.search",
-    "type": "config",
-    "extensionParams": {
-      "searchHandler": "emrapi.sqlSearch.EYEPatients",
-      "translationKey": "MODULE_LABEL_EYE_KEY",
-      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
-    },
-    "label": "Active",
-    "order": 3,
-    "requiredPrivilege": "app:clinical"
-  },
-    "bahmniClinicalPatientsSearchEntPatients": {
-    "id": "bahmni.clinical.patients.search.EntPatients",
-    "extensionPointId": "org.bahmni.patient.search",
-    "type": "config",
-    "extensionParams": {
-      "searchHandler": "emrapi.sqlSearch.EntPatients",
-      "translationKey": "MODULE_LABEL_ENT_KEY",
-      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
-    },
-    "label": "Active",
-    "order": 4,
-    "requiredPrivilege": "app:clinical"
-  },
-
- "bahmniClinicalPatientsSearchDentalPatients": {
-    "id": "bahmni.clinical.patients.search.DentalPatients",
-    "extensionPointId": "org.bahmni.patient.search",
-    "type": "config",
-    "extensionParams": {
-      "searchHandler": "emrapi.sqlSearch.DentalPatients",
-      "translationKey": "MODULE_LABEL_DENTAL_KEY",
-      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
-    },
-    "label": "Active",
-    "order": 5,
-    "requiredPrivilege": "app:clinical"
-  },
-
     "bahmniClinicalPatientsSearchEmergencyPatients": {
     "id": "bahmni.clinical.patients.search.EmergencyPatients",
     "extensionPointId": "org.bahmni.patient.search",
@@ -131,7 +90,7 @@
       "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
     },
     "label": "Active",
-    "order": 6,
+    "order": 3,
     "requiredPrivilege": "app:clinical"
   },
 
@@ -144,7 +103,7 @@
       "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
     },
     "label": "All",
-    "order": 7,
+    "order": 4,
     "requiredPrivilege": "app:clinical"
   },
   "bahmniClinicalConceptSetGroupObservationsHistory": {
