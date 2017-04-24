@@ -41,7 +41,7 @@
                     "translationKey":"DASHBOARD_TITLE_DISPOSITION_KEY",
                     "type": "disposition",
                     "numberOfVisits": 1,
-                    "displayOrder": 5
+                    "displayOrder": 4
                 },
                 "diagnosis":{
                     "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
@@ -62,13 +62,7 @@
                 "admissionDetails":{
                     "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                     "type":"admissionDetails",
-                    "displayOrder": 4
-                },
-                "navigationLinksControl":{
-                    "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
-                    "type": "navigationLinksControl",
-                    "displayOrder": 3,
-                    "showLinks" : ["home", "visit", "registration", "inpatient", "enrolment", "visitAttribute"]
+                    "displayOrder": 3
                 }
 
             }}

@@ -28,27 +28,17 @@
                 "showDetailsButton":true,
                 "displayOrder":1
             },
-            "navigationLinksControl":{  
-                "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
-                "type":"navigationLinksControl",
-                "displayOrder":2,
-                "showLinks":[  
-                    "home",
-                    "visit",
-                    "inpatient"                    
-                ]
-            },
             "disposition":{  
                 "translationKey":"DASHBOARD_TITLE_DISPOSITION_KEY",
                 "showDetailsButton":true,
                 "type":"disposition",
                 "numberOfVisits":1,
-                "displayOrder":3
+                "displayOrder":2
             },
             "treatments":{  
                 "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
                 "type":"treatment",
-                "displayOrder":4,
+                "displayOrder":3,
                 "dashboardConfig":{  
                     "showFlowSheet":true,
                     "showListView":true,
@@ -73,7 +63,7 @@
                 "translationKey":"DASHBOARD_TITLE_NUTRITIONAL_VALUES_KEY",
                 "type":"vitals",
                 "isObservation":true,
-                "displayOrder":5,
+                "displayOrder":4,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "HEIGHT",
@@ -100,7 +90,7 @@
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY",
                 "type":"vitals",
                 "isObservation":true,
-                "displayOrder":6,
+                "displayOrder":5,
                 "dashboardConfig":{  
                     "showDetailsButton":true,
                     "conceptNames":[  
@@ -123,7 +113,7 @@
                 "translationKey":"DASHBOARD_TITLE_VITALS_KEY",
                 "type":"vitals",
                 "isObservation":true,
-                "displayOrder":7,
+                "displayOrder":6,
                 "dashboardConfig":{  
                     "showDetailsButton":true,
                     "conceptNames":[  
@@ -146,13 +136,13 @@
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
                 "type":"radiology",
                 "showDetailsButton":true,
-                "displayOrder":8
+                "displayOrder":7
             },
             "radiologyOrders":{  
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-                "displayOrder":9,
+                "displayOrder":8,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Radiology Summary"
@@ -164,7 +154,7 @@
                 "orderType":"USG Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_USG_ORDERS_KEY",
-                "displayOrder":10,
+                "displayOrder":9,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "USG Report"
@@ -175,7 +165,7 @@
             "labResults":{  
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type":"labOrders",
-                "displayOrder":11,
+                "displayOrder":10,
                 "dashboardConfig":{  
                     "title":null,
                     "numberOfVisits":1,
@@ -192,12 +182,12 @@
             "programs":{  
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
-                "displayOrder":12
+                "displayOrder":11
             },
             "visits":{  
                 "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
                 "type":"visits",
-                "displayOrder":13,
+                "displayOrder":12,
                 "dashboardConfig":{  
                     "title":null,
                     "maximumNoOfVisits":8,
@@ -207,7 +197,7 @@
             "admissionDetails":{  
                 "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                 "type":"admissionDetails",
-                "displayOrder":14,
+                "displayOrder":13,
                 "showDetailsButton":true
             }
         }
