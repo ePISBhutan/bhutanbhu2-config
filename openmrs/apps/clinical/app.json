@@ -114,7 +114,16 @@
             },
             "Vitals":{
                 "hideAbnormalButton" : true
-            }
+            },
+            "Diabetes screening form":{
+               "hideAbnormalButton" : true 
+           },
+           "Diabetes follow up form":{
+                "hideAbnormalButton" : true 
+           },
+           "Diabetes next follow up date":{
+            "allowFutureDates": true
+           }
         },
         "visitPage": {
             "observationDisplay": {
