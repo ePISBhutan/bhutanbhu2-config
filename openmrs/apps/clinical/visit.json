@@ -29,14 +29,31 @@
                     "labConcepts": ""
                 }
             },
-            "pacsOrders":{
-                "type":"pacsOrders",
-                "displayOrder": 1,
-                "translationKey": "PACS_ORDERS_VISIT_PAGE_KEY",
-                "config":{
-                    "orderType": "Radiology Order"
-                }
-            }
+                 "Radiology Orders": {
+              "type": "order",
+              "translationKey": "Radiology Orders",
+              "config": {
+                  "translationKey": "Radiology Orders",
+                  "name": "ordersControl",
+                  "orderType": "Radiology Order",
+                  "conceptNames": [
+                      "Radiology Summary"
+                  ]
+              }
+          },
+          "Ultrasound Orders": {
+              "type": "order",
+              "translationKey": "Ultrasound Orders",
+              "config": {
+                  "translationKey": "Ultrasound Orders",
+                  "name": "ordersControl",
+                  "orderType": "USG Order",
+                  "conceptNames": [
+                      "USG Report"
+                  ]
+              }
+          }
+
         }
     },
     "dischargeSummary":{
@@ -120,24 +137,5 @@
             }
 
         }
-    },
-    "orders":{
-      "translationKey": "DASHBOARD_TAB_ORDERS_KEY",
-      "sections": {
-          "Radiology Orders": {
-              "type": "order",
-              "displayOrder": 0,
-              "translationKey": "Radiology Orders",
-              "config": {
-                  "translationKey": "Radiology Orders",
-                  "name": "ordersControl",
-                  "orderType": "Radiology Order",
-                  "conceptNames": [
-                      "Summary"
-                  ]
-              }
-          }
-      }
-
     }
 }

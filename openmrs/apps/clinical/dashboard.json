@@ -245,60 +245,6 @@
             }
         }
     },
-    "trends":{  
-        "translationKey":"DASHBOARD_TAB_TRENDS_KEY",
-        "maxRecentlyViewedPatients":10,
-        "sections":{  
-            "patientInformation":{  
-                "translationKey":"DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
-                "type":"patientInformation",
-                "patientAttributes":[  
-                    "caste",
-                    "class",
-                    "education",
-                    "occupation",
-                    "debt",
-                    "distanceFromCenter",
-                    "isUrban",
-                    "cluster",
-                    "RationCard",
-                    "familyIncome"
-                ],
-                "addressFields":[  
-                    "address1",
-                    "address2",
-                    "cityVillage",
-                    "countryDistrict"
-                ],
-                "displayOrder":0
-            },
-            "growthChart":{  
-                "type":"observationGraph",
-                "title":"Growth Chart",
-                "config":{  
-                    "yAxisConcepts":[  
-                        "Weight"
-                    ],
-                    "referenceData":"growthChartReference.csv",
-                    "numberOfVisits":20
-                },
-                "displayOrder":1
-            },
-            "weight/BMI":{  
-                "type":"observationGraph",
-                "title":"Weight/BMI",
-                "config":{  
-                    "yAxisConcepts":[  
-                        "Weight",
-                        "BMI"
-                    ],
-                    "xAxisConcept":"observationDateTime",
-                    "numberOfVisits":10
-                },
-                "displayOrder":3
-            }
-        }
-    },
     "patientSummary":{  
         "translationKey":"DASHBOARD_TAB_PATIENT_SUMMARY_KEY",
         "maxRecentlyViewedPatients":10,
