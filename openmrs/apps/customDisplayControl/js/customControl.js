@@ -205,4 +205,50 @@ angular.module('bahmni.common.displaycontrol.custom')
                    controller : controller,
                    template: '<ng-include src="contentUrl"/>'
                }
+               }]).directive('dischargeSummary', ['$q','observationsService','appService', 'spinner','$sce', function ($q,observationsService,appService, spinner, $sce)
+           {
+               var link = function ($scope)
+               {
+
+                   var conceptDischargeSummary = ["Instructions on Discharge"];
+                    
+                   spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptDischargeSummary, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                           $scope.obsDischarge = response.data[0];
+                       }));
+
+
+                   $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/dischargeSummary.html";
+                   $scope.curDate=new Date();
+
+               };
+               var controller = function($scope){
+                $scope.htmlLabel = function(label){
+                    return $sce.trustAsHtml(label)
+                }
+               }
+               return {
+                   restrict: 'E',
+                   link: link,
+                   controller : controller,
+                   template: '<ng-include src="contentUrl"/>'
+               }
+           }]).directive('dischargesummaryHeader', ['$q','observationsService','appService', 'spinner','$sce', function ($q,observationsService,appService, spinner, $sce)
+           {
+               var link = function ($scope)
+               {
+                   $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/dischargeSummaryHeader.html";
+                   $scope.curDate=new Date();
+
+               };
+               var controller = function($scope){
+                $scope.htmlLabel = function(label){
+                    return $sce.trustAsHtml(label)
+                }
+               }
+               return {
+                   restrict: 'E',
+                   link: link,
+                   controller : controller,
+                   template: '<ng-include src="contentUrl"/>'
+               }
            }]);

@@ -3,9 +3,8 @@
         "translationKey": "DASHBOARD_TAB_GENERAL_KEY",
         "displayByDefault": true,
         "printing": {
-            "title": "Bahmni",
-            "header": "Visit",
-            "logo": "../images/bahmniLogo.png"
+            "title": "ePIS - Ministry of Health, Bhutan",
+            "header": "Visit Summary"
         },
         "defaultSections": true,
         "sections": {
@@ -59,33 +58,23 @@
     "dischargeSummary":{
         "translationKey": "DASHBOARD_TAB_DISCHARGE_SUMMARY_KEY",
         "printing": {
-            "title": "Bahmni",
-            "header": "Discharge Certificate",
-            "logo": "../images/bahmniLogo.png"
+            "title": "ePIS - Ministry of Health, Bhutan",
+            "header": "Discharge Certificate"
         },
         "sections": {
-            "PatientInformation":{
-                "type": "patientInformation",
+                "patientInformation": {
+                "type": "custom",
+                "displayType": "Full-Page",
                 "displayOrder": 0,
                 "config": {
-                    "title": "PatientInformation",
-                    "patientAttributes": [],
-                    "addressFields": []
+                    "title": "Discharge Summary",
+                    "template": "<dischargesummary-header></dischargesummary-header>"
                 }
             },
-            "admissionDetails":{
-                "type": "admissionDetails",
-                "displayOrder": 1,
-                "config": {
-                    "showDetailsButton": true,
-                    "translationKey": "DISCHARGE_SUMMARY_ADMISSION_DETAILS_KEY"
 
-                }
-            },
-  
             "diagnoses":{
                 "type": "diagnosis",
-                "displayOrder": 4,
+                "displayOrder": 1,
                 "config": {
                     "translationKey" : "DISCHARGE_SUMMARY_DIAGNOSIS_KEY",
                     "showCertainty": false,
@@ -93,24 +82,34 @@
                     "showDetailsButton": true
                 }
             },
-            "clinicalNotes":{
-                "type": "observation",
-                "displayOrder": 5,
-                "translationKey": "DISCHARGE_SUMMARY_CLINICAL_NOTES_KEY",
+            "admissionDetails":{
+                "type": "admissionDetails",
+                "displayOrder": 2,
                 "config": {
-                    "conceptNames": [
-                        "Discharge Summary"
-                      
-                    ],
-                    "scope": "latest",
-                    "numberOfVisits": "1"
+                     "showDetailsButton": true,
+                     "translationKey": "DISCHARGE_SUMMARY_ADMISSION_DETAILS_KEY"
+
                 }
             },
+               "Treatments": {
+               "type": "treatment",
+                "displayOrder": 3,
+                "config": {
+                    "translationKey": "Treatment given",
+                    "showFlowSheet": true,
+                    "showListView": true,
+                    "showOtherActive": false,
+                    "showDetailsButton": true,
+                    "showRoute": true,
+                    "showDrugForm": true,
+                    "showProvider":false
+                 }
+             },
             "labInvestigations":{
                 "type": "investigationResult",
-                "displayOrder": 6,
+                "displayOrder": 4,
                 "config": {
-                    "translationKey":"LAB_INVESTIGATIONS_KEY",
+                    "translationKey":"Investigation done",
                     "showChart": false,
                     "showTable": true,
                     "showNormalLabResults": true,
@@ -121,18 +120,37 @@
                     "latestAccessionCount": 1
                 }
             },
-            "Treatments": {
-                "type": "treatment",
+           "instructionOnDischarge":{
+                "type": "observation",
                 "displayOrder": 6,
+                "translationKey": "DISCHARGE_SUMMARY_INSTRUCTION_ON_DISCHARGE_KEY",
                 "config": {
-                    "translationKey": "VISIT_TITLE_TREATMENTS_KEY",
-                    "showFlowSheet": true,
-                    "showListView": true,
-                    "showOtherActive": false,
-                    "showDetailsButton": true,
-                    "showRoute": true,
-                    "showDrugForm": true,
-                    "showProvider":false
+                    "conceptNames": [
+                    "Instructions on Discharge" 
+                    ],
+                    "scope": "latest"
+                }
+            },
+            "followUp":{
+                "type": "observation",
+                "displayOrder": 7,
+                "translationKey": "DISCHARGE_SUMMARY_FOLLOW_UP_KEY",
+                "config": {
+                    "conceptNames": [
+                        "Follow up Date",
+                        "Follow-Up Notes" 
+                    ],
+                    "scope": "latest"
+                }
+            },
+            "dischargeSummary": {
+                "type": "custom",
+                "displayType": "Full-Page",
+                "displayOrder": 8,
+                "config": {
+                    "title": "Discharge Summary",
+                    "template": "<discharge-summary></discharge-summary>"
+              
                 }
             }
 
