@@ -121,6 +121,23 @@
             "Diabetes screening form":{
                "hideAbnormalButton" : true 
            },
+           "HEIGHT":{
+                "disableAddNotes": true,
+                "required":true
+           },
+           "WEIGHT":{
+                "disableAddNotes": true,
+                "required":true
+           },
+           "Waist size":{
+                "disableAddNotes": true
+           },
+           "Diabetes Screening RBS":{
+                "disableAddNotes": true
+           },
+           "Diabetes Screening Symptoms":{
+                "disableAddNotes": true
+           },
            "Diabetes follow up form":{
                 "hideAbnormalButton" : true 
            },
