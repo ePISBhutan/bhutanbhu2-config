@@ -160,7 +160,9 @@
                 "hideAbnormalButton" : true 
            },
            "Diabetes next follow up date":{
-            "allowFutureDates": true
+            "allowFutureDates": true,
+            "disableAddNotes": true,
+            "required":true
            }
         },
         "visitPage": {
