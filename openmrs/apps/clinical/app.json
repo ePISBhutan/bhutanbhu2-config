@@ -129,6 +129,24 @@
                 "disableAddNotes": true,
                 "required":true
            },
+           "BMI":{
+                "disableAddNotes": true
+           },
+           "BMI STATUS":{
+                "disableAddNotes": true
+           },
+           "Systolic":{
+            "disableAddNotes": true
+           },
+           "Diastolic":{
+            "disableAddNotes": true
+           },
+           "Posture":{
+            "disableAddNotes": true
+           },
+           "Diabetes Screening Date":{
+            "disableAddNotes": true
+           },
            "Waist size":{
                 "disableAddNotes": true
            },
