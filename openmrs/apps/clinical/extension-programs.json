@@ -1,15 +1,28 @@
 {
-    "bahmniClinicalPatientsSearchActivePatientsForPrograms": {
-        "id": "bahmni.clinical.patients.search.activePatients",
+    "bahmniClinicalPatientsSearchDiabetesPatientsForPrograms": {
+        "id": "bahmni.clinical.patients.search.diabetesProgramPatients",
         "extensionPointId": "org.bahmni.patient.search",
         "type": "config",
         "extensionParams": {
-            "searchHandler": "emrapi.sqlSearch.activePatients",
-            "translationKey": "Active Patients",
+            "searchHandler": "emrapi.sqlSearch.diabetesProgramPatients",
+            "translationKey": "Diabetes Patients",
             "forwardUrl": "#/programs/patient/{{patientUuid}}/consultationContext"
         },
         "label": "Active",
         "order": 1,
+        "requiredPrivilege": "app:clinical"
+    },
+    "bahmniClinicalPatientsSearchHypertensionPatientsForPrograms": {
+        "id": "bahmni.clinical.patients.search.hypertensionProgramPatients",
+        "extensionPointId": "org.bahmni.patient.search",
+        "type": "config",
+        "extensionParams": {
+            "searchHandler": "emrapi.sqlSearch.hypertensionProgramPatients",
+            "translationKey": "Hypertension Patients",
+            "forwardUrl": "#/programs/patient/{{patientUuid}}/consultationContext"
+        },
+        "label": "Active",
+        "order": 2,
         "requiredPrivilege": "app:clinical"
     },
     "bahmniClinicalPatientsSearchAllPatients": {
@@ -21,7 +34,7 @@
             "forwardUrl": "#/programs/patient/{{patientUuid}}/consultationContext"
         },
         "label": "All",
-        "order": 2,
+        "order": 3,
         "requiredPrivilege": "app:clinical"
     },
     "bahmniClinicalConceptSetGroupObservationsHistory": {
