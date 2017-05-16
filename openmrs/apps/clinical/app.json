@@ -159,6 +159,9 @@
            "Diabetes follow up form":{
                 "hideAbnormalButton" : true 
            },
+           "Diabetes Followup RBS":{
+            "disableAddNotes": true
+            },
            "Diabetes next follow up date":{
             "allowFutureDates": true,
             "disableAddNotes": true,
