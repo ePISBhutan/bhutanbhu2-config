@@ -81,12 +81,8 @@
         "maxConceptSetLevels": 3,
         "allowOnlyCodedDiagnosis": false,
         "conceptSetUI": {
-            "Chief Complaint Data": {
-                "autocomplete":true,
-                "codedConceptName":"Chief Complaint",
-                "nonCodedConceptName":"Non-Coded Chief Complaint",
-                "durationRequired": false,
-                "allowAddMore": true
+            "H&E, Chief Complaint": {
+                 "required":true 
             },
 
              "Follow up Date": {
