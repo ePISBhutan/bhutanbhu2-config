@@ -181,17 +181,40 @@
                     }
                 }
             },
+            "hypertensionForm":{  
+                "translationKey":"DASHBOARD_TITLE_HYPERTENSION_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":10,
+                "dashboardConfig":{  
+                    "showDetailsButton":true,
+                    "conceptNames":[  
+                        "Hypertension Form"
+                    ],
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{  
+                    "conceptNames":[  
+                        "Hypertension Form"
+                    ],
+                    "numberOfVisits":5,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
+                }
+            },
             "radiology":{  
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
                 "type":"radiology",
                 "showDetailsButton":true,
-                "displayOrder":10
+                "displayOrder":11
             },
             "radiologyOrders":{  
                 "orderType":"Radiology Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-                "displayOrder":11,
+                "displayOrder":12,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "Radiology Summary"
@@ -203,7 +226,7 @@
                 "orderType":"USG Order",
                 "type":"ordersControl",
                 "translationKey":"DASHBOARD_TITLE_USG_ORDERS_KEY",
-                "displayOrder":12,
+                "displayOrder":13,
                 "dashboardConfig":{  
                     "conceptNames":[  
                         "USG Report"
@@ -214,7 +237,7 @@
             "labResults":{  
                 "translationKey":"DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type":"labOrders",
-                "displayOrder":13,
+                "displayOrder":14,
                 "dashboardConfig":{  
                     "title":null,
                     "numberOfVisits":1,
@@ -231,12 +254,12 @@
             "programs":{  
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
-                "displayOrder":14
+                "displayOrder":15
             },
             "visits":{  
                 "translationKey":"DASHBOARD_TITLE_VISITS_KEY",
                 "type":"visits",
-                "displayOrder":15,
+                "displayOrder":16,
                 "dashboardConfig":{  
                     "title":null,
                     "maximumNoOfVisits":8,
