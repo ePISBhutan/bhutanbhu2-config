@@ -216,12 +216,18 @@
         ]
     }
 },
-
 "LengthOfStay": {
     "name": "Length of Stay Per Patient",
     "type": "MRSGeneric",
     "config": {
       "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/ipdLengthOfStay.sql"
+    }
+},
+"BedOccupancy": {
+    "name": "Bed Occupancy Report",
+    "type": "MRSGeneric",
+    "config": {
+      "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/SQL/ipdBedOccupancy.sql"
     }
 }
 
