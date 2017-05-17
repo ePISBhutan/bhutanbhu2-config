@@ -162,7 +162,29 @@
             "allowFutureDates": true,
             "disableAddNotes": true,
             "required":true
-           }
+           },
+             "Hypertension Form":{
+              "hideAbnormalButton":true
+            },
+
+            "Hypertension Form, WEIGHT":{
+              "disableAddNotes":true
+            },
+            "Hypertension Form, Systolic Data":{
+              "disableAddNotes":true,
+              "required":true
+            },
+            "Hypertension Form, Diastolic Data":{
+              "disableAddNotes":true,
+              "required":true
+            },
+           
+            "Hypertension Form, Posture":{
+              "disableAddNotes":true
+            },
+            "Hypertension RBS Data":{
+              "disableAddNotes":true
+            }
         },
         "visitPage": {
             "observationDisplay": {
