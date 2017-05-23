@@ -96,7 +96,7 @@
                 "displayOrder": 3,
                 "config": {
                     "translationKey": "Treatment given",
-                    "showFlowSheet": true,
+                    "showFlowSheet": false,
                     "showListView": true,
                     "showOtherActive": false,
                     "showDetailsButton": true,
