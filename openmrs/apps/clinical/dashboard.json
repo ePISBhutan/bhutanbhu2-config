@@ -268,42 +268,6 @@
             }
         }
     },
-    "patientSummary":{  
-        "translationKey":"DASHBOARD_TAB_PATIENT_SUMMARY_KEY",
-        "maxRecentlyViewedPatients":10,
-        "sections":{  
-            "HistoryAndExamination":{  
-                "type":"historyAndExamination",
-                "isObservation":true,
-                "displayType":"Full-Page",
-                "dashboardConfig":{  
-                    "showGroupDateTime":false,
-                    "conceptNames":[  
-                        "Chief Complaint Data",
-                        "Examination Notes",
-                        "Smoking History",
-                        "Clief COmplaint Notes",
-                        "Blood Pressure"
-                    ]
-                },
-                "displayOrder":6,
-                "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY"
-            },
-            "drugOther":{  
-                "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
-                "type":"drugOrderDetails",
-                "displayType":"Full-Page",
-                "showDetailsButton":true,
-                "displayOrder":24,
-                "dashboardConfig":{  
-                    "showOnlyActive":true,
-                    "drugConceptSet":"All Other Drugs"
-                }
-            }
-
-        }
-    },
-
     "referralform": {
         "translationKey": "Referral Form",
         "displayType": "Full-Page",
