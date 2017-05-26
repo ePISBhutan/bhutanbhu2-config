@@ -28,7 +28,7 @@
                     "labConcepts": ""
                 }
             },
-                 "Radiology Orders": {
+           "Radiology Orders": {
               "type": "order",
               "translationKey": "Radiology Orders",
               "config": {
@@ -53,6 +53,7 @@
               }
           }
 
+        
         }
     },
     "dischargeSummary":{
@@ -62,7 +63,7 @@
             "header": "Discharge Certificate"
         },
         "sections": {
-                "patientInformation": {
+           "patientInformation": {
                 "type": "custom",
                 "displayType": "Full-Page",
                 "displayOrder": 0,
@@ -71,8 +72,7 @@
                     "template": "<dischargesummary-header></dischargesummary-header>"
                 }
             },
-
-            "diagnoses":{
+             "diagnoses":{
                 "type": "diagnosis",
                 "displayOrder": 1,
                 "config": {
@@ -86,25 +86,11 @@
                 "type": "admissionDetails",
                 "displayOrder": 2,
                 "config": {
-                     "showDetailsButton": true,
-                     "translationKey": "DISCHARGE_SUMMARY_ADMISSION_DETAILS_KEY"
+                    "showDetailsButton": true,
+                    "translationKey": "DISCHARGE_SUMMARY_ADMISSION_DETAILS_KEY"
 
                 }
             },
-               "Treatments": {
-               "type": "treatment",
-                "displayOrder": 3,
-                "config": {
-                    "translationKey": "Treatment given",
-                    "showFlowSheet": false,
-                    "showListView": true,
-                    "showOtherActive": false,
-                    "showDetailsButton": true,
-                    "showRoute": true,
-                    "showDrugForm": true,
-                    "showProvider":false
-                 }
-             },
             "labInvestigations":{
                 "type": "investigationResult",
                 "displayOrder": 4,
@@ -120,13 +106,24 @@
                     "latestAccessionCount": 1
                 }
             },
-           "instructionOnDischarge":{
+            "dischargeTreatmentGiven":{
+                "type": "observation",
+                "displayOrder": 6,
+                "translationKey": "DISCHARGE_SUMMARY_TREATMENTS_GIVEN_KEY",
+                "config": {
+                    "conceptNames": [
+                        "Consultation Note" 
+                    ],
+                    "scope": "latest"
+                }
+            },
+            "instructionOnDischarge":{
                 "type": "observation",
                 "displayOrder": 6,
                 "translationKey": "DISCHARGE_SUMMARY_INSTRUCTION_ON_DISCHARGE_KEY",
                 "config": {
                     "conceptNames": [
-                    "Instructions on Discharge" 
+                        "Instructions on Discharge" 
                     ],
                     "scope": "latest"
                 }
@@ -150,7 +147,6 @@
                 "config": {
                     "title": "Discharge Summary",
                     "template": "<discharge-summary></discharge-summary>"
-              
                 }
             }
 

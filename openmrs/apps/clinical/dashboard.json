@@ -41,28 +41,27 @@
                 "displayOrder":3,
                 "showDetailsButton":true
             },
-            "treatments":{  
+             "treatmentsGeneral":{  
                 "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
-                "type":"treatment",
+                "type":"vitals",
+                "isObservation":true,
                 "displayOrder":4,
                 "dashboardConfig":{  
-                    "showFlowSheet":true,
-                    "showListView":true,
-                    "showRoute":true,
-                    "showDrugForm":true,
-                    "numberOfVisits":5,
-                    "showOtherActive":true,
-                    "showDetailsButton":true
+                    "showDetailsButton":true,
+                    "conceptNames":[  
+                        "Consultation Note"
+                    ],
+                    "numberOfVisits":2
                 },
                 "expandedViewConfig":{  
-                    "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
-                    "showFlowSheet":true,
-                    "showListView":true,
-                    "showRoute":true,
-                    "showDrugForm":true,
-                    "numberOfVisits":10,
-                    "showOtherActive":true,
-                    "showDetailsButton":true
+                    "conceptNames":[  
+                        "Consultation Note"
+                    ],
+                    "numberOfVisits":5,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
                 }
             },
             "historyAndExaminations":{  
@@ -281,23 +280,22 @@
                 }
             },
             "referralHistoryAndExamination":{  
-                "type":"historyAndExamination",
+                "type":"vitals",
+                "displayOrder":2,
                 "isObservation":true,
                 "displayType":"Full-Page",
                 "dashboardConfig":{  
                     "showGroupDateTime":false,
+                    "numberOfVisits": 3,
                     "conceptNames":[  
-                        "Chief Complaint Data",
-                        "Chief Complaint Notes",
-                        "History Notes",
-                        "Examination Notes"
+                        "H&E, Chief Complaint",
+                        "Examination Notes",
+                        "H&E, Investigation Notes"
                     ]
                 },
-                "displayOrder":2,
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY"
             },
-
-            "diagnosis": {
+            "referraldiagnosis": {
                 "title": "Diagnosis",
                 "displayType": "Full-Page",
                 "displayOrder": 3,
@@ -306,9 +304,9 @@
                 "showCertainty": false,
                 "showOrder": true,
                 "showDetailsButton": true,
-                "numberOfVisits": 4
+                "numberOfVisits": 3
             },
-            "labResults": {
+            "referrallabResults": {
                      "title": "Lab Results",
                      "displayType": "Full-Page",
                      "type": "labOrders",
@@ -320,33 +318,22 @@
                     "showNormalLabResults": true,
                     "showCommentsExpanded": true,
                     "showAccessionNotes": true,
-                    "numberOfVisits": 6,
+                    "numberOfVisits": 3,
                     "showDetailsButton": false
                 }
             },
-            "treatment": {
-                    "title": "Treatments",
-                    "displayType": "Full-Page",
-                    "type": "treatment",
-                    "displayOrder": 5,
-                    "dashboardParams": {
-                    "showFlowSheet": false,
-                    "showListView": true,
-                    "showRoute": false,
-                    "showDrugForm": false,
-                    "numberOfVisits": 4,
-                    "showOtherActive": true,
-                    "showDetailsButton": false
-                },
-                "allTreatmentDetails": {
-                    "title": "Treatments",
-                    "showFlowSheet": false,
-                    "showListView": true,
-                    "showRoute": true,
-                    "showDrugForm": true,
-                    "numberOfVisits": 4,
-                    "showOtherActive": true,
-                    "showDetailsButton": true
+            "referraltreatments":{  
+                "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
+                "displayType": "Full-Page",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":5,
+                "dashboardConfig":{  
+                    "showDetailsButton":true,
+                    "conceptNames":[  
+                        "Consultation Note"
+                    ],
+                    "numberOfVisits":3
                 }
             },
             "referralSummaryFooter": {
