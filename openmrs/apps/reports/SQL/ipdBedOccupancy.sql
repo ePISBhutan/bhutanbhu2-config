@@ -24,5 +24,5 @@ from (
               left join person_address
                 on person.person_id = person_address.person_id
             where date(bedpatmap.date_started) BETWEEN '#startDate#' and '#endDate#'
-            group by person.person_id
+            group by person.person_id,bedpatmap.date_started
 ) as TotalLengthOfStay;

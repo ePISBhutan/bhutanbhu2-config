@@ -31,4 +31,5 @@ on NBStatus.person_id=person.person_id
 left join person_address
 	on person.person_id = person_address.person_id
 where date(bedpatmap.date_started) BETWEEN '#startDate#' and '#endDate#'
-group by person.person_id;
+group by person.person_id,bedpatmap.date_started
+Order by bedpatmap.date_started,person.person_id;
