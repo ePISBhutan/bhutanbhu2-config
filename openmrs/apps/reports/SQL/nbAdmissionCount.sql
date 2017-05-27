@@ -11,16 +11,18 @@ from (/*Pivoting the table row to column*/
        from (/*Getting the count on visit type and NonResidentialBhutaneseType where bed has been assigned*/
               Select vt.name VisitType,cn.name NonBhutaneseCode,Count(distinct v.patient_id) NoOfVisits
               from visit v
-              join visit_type vt on vt.visit_type_id=v.visit_type_id
-              join person_attribute pa on pa.person_id=v.patient_id
-              join person_attribute_type pat on pat.person_attribute_type_id=pa.person_attribute_type_id
-              join concept_name cn on cn.concept_id=pa.value
-              join bed_patient_assignment_map bedpatmap on bedpatmap.patient_id=v.patient_id
-              join encounter e on e.encounter_id=bedpatmap.encounter_id and e.visit_id=v.visit_id
+                join visit_type vt on vt.visit_type_id=v.visit_type_id
+                join person_attribute pa on pa.person_id=v.patient_id
+                join person_attribute_type pat on pat.person_attribute_type_id=pa.person_attribute_type_id
+                join concept_name cn on cn.concept_id=pa.value
+                join encounter e on  e.visit_id=v.visit_id
+                JOIN encounter_type et on e.encounter_type=et.encounter_type_id
               where pat.name='NonResidentialBhutaneseType'
-                  and cn.concept_name_type='FULLY_SPECIFIED'
-                  and cast(v.date_started AS DATE) BETWEEN '#startDate#' and '#endDate#'
-                  and v.voided is false
+                    and cn.concept_name_type='FULLY_SPECIFIED'
+                    and cast(v.date_started AS DATE) BETWEEN '2017-05-01' and '2017-05-31'
+                    and v.voided is FALSE
+                    and et.name='ADMISSION'
+                    and e.voided is FALSE
               group by vt.name,cn.name
             ) as NbVisitCount
      ) as NbVisitCount1 Group by VisitType;
