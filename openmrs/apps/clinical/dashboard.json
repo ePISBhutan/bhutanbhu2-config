@@ -318,14 +318,11 @@
                      "type": "labOrders",
                      "displayOrder": 4,
                      "dashboardConfig": {
-                    "title": "Lab Investigations",
-                    "showChart": false,
-                    "showTable": false,
-                    "showNormalLabResults": true,
-                    "showCommentsExpanded": true,
-                    "showAccessionNotes": true,
-                    "numberOfVisits": 3,
-                    "showDetailsButton": false
+                     "title":null,
+                     "numberOfVisits":3,
+                     "showChart":false,
+                     "showTable":true,
+                     "showDetailsButton":false
                 }
             },
             "referraltreatments":{  
