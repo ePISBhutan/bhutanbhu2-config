@@ -19,7 +19,7 @@ from (/*Pivoting the table row to column*/
                 JOIN encounter_type et on e.encounter_type=et.encounter_type_id
               where pat.name='NonResidentialBhutaneseType'
                     and cn.concept_name_type='FULLY_SPECIFIED'
-                    and cast(v.date_started AS DATE) BETWEEN '2017-05-01' and '2017-05-31'
+                    and cast(v.date_started AS DATE) BETWEEN '#startDate#' and '#endDate#'
                     and v.voided is FALSE
                     and et.name='ADMISSION'
                     and e.voided is FALSE
