@@ -184,6 +184,9 @@
             },
             "Hypertension RBS Data":{
               "disableAddNotes":true
+            },
+            "Vitals RBS Data":{
+              "disableAddNotes":true
             }
         },
         "visitPage": {
