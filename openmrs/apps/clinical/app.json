@@ -187,6 +187,17 @@
             },
             "Vitals RBS Data":{
               "disableAddNotes":true
+            },
+            "Vitals, Systolic Data":{
+              "disableAddNotes":true,
+              "required":true
+            },
+            "Vitals, Diastolic Data":{
+              "disableAddNotes":true,
+              "required":true
+            },
+            "Vitals, Posture":{
+              "disableAddNotes":true
             }
         },
         "visitPage": {
