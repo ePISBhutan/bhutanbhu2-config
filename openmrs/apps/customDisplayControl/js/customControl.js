@@ -210,10 +210,20 @@ angular.module('bahmni.common.displaycontrol.custom')
                var link = function ($scope)
                {
 
-                   var conceptDischargeSummary = ["Instructions on Discharge"];
+                   var conceptInstructionOnDischarge = ["Instructions on Discharge"];
+                   var conceptFollowUpDate = ["Follow up Date"];
+                   var conceptFollowUpNote = ["Follow-Up Notes"];
                     
-                   spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptDischargeSummary, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                   spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptInstructionOnDischarge, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
                            $scope.obsDischarge = response.data[0];
+                       }));
+
+                   spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptFollowUpDate, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                           $scope.obsFollowUpDate= response.data[0];
+                       }));
+
+                   spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptFollowUpNote, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                           $scope.obsFollowUpNote = response.data[0];
                        }));
 
 

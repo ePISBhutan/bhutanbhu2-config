@@ -60,7 +60,8 @@
         "translationKey": "DASHBOARD_TAB_DISCHARGE_SUMMARY_KEY",
         "printing": {
             "title": "ePIS - Ministry of Health, Bhutan",
-            "header": "Discharge Certificate"
+            "header": "Discharge Certificate",
+            "logo": "/bahmni_config/openelis/images/labLogo.jpg"
         },
         "sections": {
            "patientInformation": {
@@ -113,29 +114,6 @@
                 "config": {
                     "conceptNames": [
                         "Consultation Note" 
-                    ],
-                    "scope": "latest"
-                }
-            },
-            "instructionOnDischarge":{
-                "type": "observation",
-                "displayOrder": 6,
-                "translationKey": "DISCHARGE_SUMMARY_INSTRUCTION_ON_DISCHARGE_KEY",
-                "config": {
-                    "conceptNames": [
-                        "Instructions on Discharge" 
-                    ],
-                    "scope": "latest"
-                }
-            },
-            "followUp":{
-                "type": "observation",
-                "displayOrder": 7,
-                "translationKey": "DISCHARGE_SUMMARY_FOLLOW_UP_KEY",
-                "config": {
-                    "conceptNames": [
-                        "Follow up Date",
-                        "Follow-Up Notes" 
                     ],
                     "scope": "latest"
                 }
