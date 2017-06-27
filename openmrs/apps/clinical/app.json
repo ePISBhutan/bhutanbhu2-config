@@ -198,7 +198,22 @@
             },
             "Vitals, Posture":{
               "disableAddNotes":true
-            }
+            },
+          "Pediatric form":{
+            "hideAbnormalButton" : true
+          },
+          "PF, Heart Rate":{
+            "required":true
+          },
+          "PF, RR":{
+            "required":true
+          },
+          "PF, Temperature Data":{
+            "required":true
+          },
+          "PF, Weight":{
+            "required":true
+          }
         },
         "visitPage": {
             "observationDisplay": {
