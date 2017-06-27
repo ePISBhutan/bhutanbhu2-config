@@ -4,7 +4,7 @@ concat(pname.given_name,' ',pname.family_name) as 'Patient Name',
 floor(datediff(now(),person.birthdate)/365) as 'Age',
 person.gender as Sex ,
 ifnull(NBStatus.name,'B') as 'Nationality',
-person_address.city_village as City,
+person_address.address1 as 'Local address',
 bedpatmap.date_started as 'Date of Admission', 
 bedpatmap.date_stopped as 'Date of Discharge',
 case when date(bedpatmap.date_stopped)=date(bedpatmap.date_started) then 1 else

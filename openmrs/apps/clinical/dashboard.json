@@ -9,15 +9,15 @@
                 "type":"patientInformation",
                 "displayOrder":0,
                 "ageLimit":100,
-                "patientAttributes":[  
-                    "CID",
-                    "FatherHusbandName"
+                "patientAttributes":[
+                    "FatherHusbandName",
+                    "ContactNo"
                 ],
-                "addressFields":[  
+                "addressFields":[
                     "address1",
-                    "address2",
                     "cityVillage",
-                    "countryDistrict"
+                    "address3",
+                    "countyDistrict"
                 ]
             },
             "diagnosis":{  

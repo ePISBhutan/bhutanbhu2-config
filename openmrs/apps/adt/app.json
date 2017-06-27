@@ -56,8 +56,16 @@
                     "translationKey": "DASHBOARD_TITLE_PATIENT_INFORMATION_KEY",
                     "type": "patientInformation",
                     "displayOrder": 1,
-                    "patientAttributes": [],
-                    "addressFields": []
+                    "patientAttributes": [
+                        "FatherHusbandName",
+                        "ContactNo"
+                    ],
+                    "addressFields": [
+                        "address1",
+                        "cityVillage",
+                        "address3",
+                        "countyDistrict"
+                    ]
                 },
                 "admissionDetails":{
                     "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",

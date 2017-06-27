@@ -87,7 +87,7 @@
             },
             "patientSearchResults": {
                 "address": {
-                    "fields" : ["city_village"]
+                    "fields" : ["address1"]
                 },
                 "personAttributes": {
                     "fields": [ 
@@ -98,9 +98,9 @@
             },
             "patientSearch": {
                 "address": {
-                    "label": "Village name",
-                    "placeholder": "Enter village name",
-                    "field": "city_village"
+                    "label": "Local address",
+                    "placeholder": "Enter local address",
+                    "field": "address1"
                 },
                 "customAttributes": {
                     "label": "Contact no",
