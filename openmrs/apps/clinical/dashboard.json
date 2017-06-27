@@ -14,10 +14,7 @@
                     "ContactNo"
                 ],
                 "addressFields":[
-                    "address1",
-                    "cityVillage",
-                    "address3",
-                    "countyDistrict"
+                    "address1"
                 ]
             },
             "diagnosis":{  
