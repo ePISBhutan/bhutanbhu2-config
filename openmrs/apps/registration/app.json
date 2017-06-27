@@ -36,7 +36,7 @@
                 }
             },
             "addressHierarchy": {
-                "showAddressFieldsTopDown": true
+                "showAddressFieldsTopDown": false
             },
             "relationshipTypeMap": {
                 "Doctor":"provider",
