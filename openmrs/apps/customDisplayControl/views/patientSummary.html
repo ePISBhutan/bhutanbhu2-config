@@ -1,0 +1,24 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/bahmni_config/openmrs/apps/customDisplayControl/css/print/custom-printref.css" media="print"/>
+</head>
+<body>
+<div>
+    <br>
+    <span class="increased-font">
+			<strong>Date : </strong>{{curDate|date : "dd-MMM-yyyy"}}
+		</span>
+    <br><br>
+    <span class="increased-font">
+			<strong>Reg no : </strong>{{patient.identifier}}
+		</span>
+    <span class="increased-font padding-span">
+			<strong>Name : </strong> {{patient.name}}
+		</span>
+    <span class="increased-font padding-span">
+			<strong>Age/Sex : </strong>{{patient.age}} Years / {{patient.gender}}
+		</span>
+    <br><br>
+</div>
+</body>
+</html>
