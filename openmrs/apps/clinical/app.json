@@ -112,7 +112,8 @@
                 "multiSelect": true
             },
             "Vitals":{
-                "hideAbnormalButton" : true
+                "hideAbnormalButton" : true,
+                "allowAddMore": true
             },
             "Diabetes screening form":{
                "hideAbnormalButton" : true 
