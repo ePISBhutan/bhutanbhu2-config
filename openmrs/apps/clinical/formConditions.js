@@ -90,20 +90,7 @@ Bahmni.ConceptSet.FormConditions.rules = {
             }
         }
     },
-        'DR,Mode of Delivery' : function (formName, formFieldValues) {
-        var delivery_mode = formFieldValues['DR,Mode of Delivery'];
-        
-        if (delivery_mode =="Others") {
-            return {
-                enable: ["DR,Other Mode of Delivery"]
-            }
-        } else {
-            return {
-                disable: ["DR,Other Mode of Delivery"]
-            }
-        }
-    },
-            'DR,Term' : function (formName, formFieldValues) {
+     'DR,Term' : function (formName, formFieldValues) {
         var delivery_term = formFieldValues['DR,Term'];
         
         if (delivery_term =="Others") {
