@@ -200,6 +200,9 @@
             "Vitals, Posture":{
               "disableAddNotes":true
             },
+            "Vitals, Blood Pressure":{
+             "allowAddMore":true
+              },
           "Pediatric form":{
             "hideAbnormalButton" : true
           },

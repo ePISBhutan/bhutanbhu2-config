@@ -51,6 +51,45 @@ Bahmni.ConceptSet.FormConditions.rules = {
             }
         }
     },
+    'Vitals, Diastolic Data' : function (formName, formFieldValues) {
+        var systolic = formFieldValues['Vitals, Systolic'];
+        var diastolic = formFieldValues['Vitals, Diastolic'];
+        if (systolic || diastolic) {
+            return {
+                enable: ["Vitals, Posture"]
+            }
+        } else {
+            return {
+                disable: ["Vitals, Posture"]
+            }
+        }
+    },
+    'Vitals, Systolic Data' : function (formName, formFieldValues) {
+        var systolic = formFieldValues['Vitals, Systolic'];
+        var diastolic = formFieldValues['Vitals, Diastolic'];
+        if (systolic || diastolic) {
+            return {
+                enable: ["Vitals, Posture"]
+            }
+        } else {
+            return {
+                disable: ["Vitals, Posture"]
+            }
+        }
+    },
+    'DR,Mode of Delivery' : function (formName, formFieldValues) {
+        var delivery_mode = formFieldValues['DR,Mode of Delivery'];
+        
+        if (delivery_mode =="Others") {
+            return {
+                enable: ["DR,Other Mode of Delivery"]
+            }
+        } else {
+            return {
+                disable: ["DR,Other Mode of Delivery"]
+            }
+        }
+    },
         'DR,Mode of Delivery' : function (formName, formFieldValues) {
         var delivery_mode = formFieldValues['DR,Mode of Delivery'];
         
