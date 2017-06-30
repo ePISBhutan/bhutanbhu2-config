@@ -265,6 +265,53 @@ angular.module('bahmni.common.displaycontrol.custom')
             {
                 var link = function ($scope)
                 {
+                    var medication = ["Consultation Note"];
+                    var nonCodedDiagnosis = ["Non-coded Diagnosis"];
+                    var codedDiagnosis = ["Coded Diagnosis"];
+                    var codedDiagnosisResponse='';
+                    var nonCodedDiagnosisResponse='';
+                    var count;
+
+
+                    spinner.forPromise(observationsService.fetch($scope.patient.uuid, medication, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                        $scope.obsMedication = response.data[0];
+                    }));
+
+                    spinner.forPromise(observationsService.fetch($scope.patient.uuid, nonCodedDiagnosis,"latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                        for(count=0; count<response.data.length;count++)
+                        {
+                            if(nonCodedDiagnosisResponse=='')
+                            {
+                                nonCodedDiagnosisResponse=response.data[count].valueAsString;
+                            }
+                            else {
+                                nonCodedDiagnosisResponse = nonCodedDiagnosisResponse + ', ' + response.data[count].valueAsString;
+                            }
+
+                        }
+
+                    }));
+
+                    spinner.forPromise(observationsService.fetch($scope.patient.uuid, codedDiagnosis,"latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+
+                        codedDiagnosisResponse=nonCodedDiagnosisResponse;
+
+                        for(count=0; count<response.data.length;count++)
+                        {
+                            if(codedDiagnosisResponse=='')
+                            {
+                                codedDiagnosisResponse=response.data[count].valueAsString;
+                            }
+                            else {
+                                codedDiagnosisResponse = codedDiagnosisResponse + ', ' + response.data[count].valueAsString;
+                            }
+
+                        }
+
+                        $scope.obsCodedDiagnosis=codedDiagnosisResponse;
+
+                    }));
+
                     $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/patientSummary.html";
                     $scope.curDate=new Date();
 

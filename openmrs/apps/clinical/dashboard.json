@@ -365,29 +365,6 @@
                     "title": "Referral form doctor",
                     "template": "<patientsummary></patientsummary>"
                 }
-            },
-            "patientSummarydiagnosis":{
-                "translationKey":"DASHBOARD_TITLE_DIAGNOSIS_KEY",
-                "type":"diagnosis",
-                "displayType": "Full-Page",
-                "showCertainty":true,
-                "showOrder":true,
-                "showDetailsButton":true,
-                "displayOrder":1
-            },
-            "patientSummaryTreatmentGiven":{
-                "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
-                "displayType": "Full-Page",
-                "type":"vitals",
-                "isObservation":true,
-                "displayOrder":2,
-                "dashboardConfig":{
-                    "showDetailsButton":true,
-                    "conceptNames":[
-                        "Consultation Note"
-                    ],
-                    "scope":"latest"
-                }
             }
         }
     }
