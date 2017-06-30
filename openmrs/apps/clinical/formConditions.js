@@ -102,31 +102,5 @@ Bahmni.ConceptSet.FormConditions.rules = {
                 disable: ["DR,Other Term"]
             }
         }
-    },
-    'PF, Diastolic Data' : function (formName, formFieldValues) {
-        var systolic = formFieldValues['PF, Systolic'];
-        var diastolic = formFieldValues['PF, Diastolic'];
-        if (systolic || diastolic) {
-            return {
-                enable: ["PF, Posture"]
-            }
-        } else {
-            return {
-                disable: ["PF, Posture"]
-            }
-        }
-    },
-    'PF, Systolic Data' : function (formName, formFieldValues) {
-        var systolic = formFieldValues['PF, Systolic'];
-        var diastolic = formFieldValues['PF, Diastolic'];
-        if (systolic || diastolic) {
-            return {
-                enable: ["PF, Posture"]
-            }
-        } else {
-            return {
-                disable: ["PF, Posture"]
-            }
-        }
     }
 };
