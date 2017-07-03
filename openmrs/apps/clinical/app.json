@@ -225,6 +225,17 @@
           "Diastolic Data":{
             "required":true,
             "disableAddNotes":true
+          },
+            "Hypertension Form, WEIGHT":{
+            "disableAddNotes":true
+          },
+            "Hypertension Form, Pulse Data":{
+            "required":true,
+            "disableAddNotes":true
+          },
+            "Hypertension Form":{
+            "hideAbnormalButton":true,
+            "allowAddMore":true
           }
         },
         "visitPage": {
