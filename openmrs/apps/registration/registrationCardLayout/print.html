@@ -54,13 +54,6 @@
                 </tr>
                 <tr>
                     <td class="registrationCard-details-name">
-                        <span class="hindi-text">DOB</span>
-                    </td>
-                    <td class="registrationCard-details-seperator"> :  </td>
-                    <td><span class="hindi-text">{{patient.birthdate|date}}</span> </td>
-                </tr>
-                <tr>
-                    <td class="registrationCard-details-name">
                         <span class="hindi-text">Gender</span>
                     </td>
                     <td class="registrationCard-details-seperator"> :  </td>
@@ -68,10 +61,10 @@
                 </tr>
                 <tr>
                     <td class="registrationCard-details-name">
-                        <span class="hindi-text">Address</span>
+                        <span class="hindi-text">Local Add</span>
                     </td>
                     <td class="registrationCard-details-seperator"> :  </td>
-                    <td><span class="hindi-text">{{patient.address.cityVillage}}, {{patient.address.address3}}, {{patient.address.countyDistrict}}</span></td>
+                    <td><span class="hindi-text">{{patient.address.address1}}</span></td>
                 </tr>
                 </tbody>
             </table>
