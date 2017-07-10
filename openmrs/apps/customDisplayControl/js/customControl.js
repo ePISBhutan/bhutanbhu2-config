@@ -268,6 +268,7 @@ angular.module('bahmni.common.displaycontrol.custom')
         var medication = ["Consultation Note"];
         var nonCodedDiagnosis = ["Non-coded Diagnosis"];
         var codedDiagnosis = ["Coded Diagnosis"];
+        var conceptFollowUpNotes = ["Follow up Form, Follow up Notes"];
         var codedDiagnosisResponse='';
         var nonCodedDiagnosisResponse='';
         var count;
@@ -311,6 +312,10 @@ angular.module('bahmni.common.displaycontrol.custom')
             $scope.obsCodedDiagnosis=codedDiagnosisResponse;
 
         }));
+
+        spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptFollowUpNotes, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                           $scope.obsFollowUpNotes = response.data[0];
+                       }));
 
         $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/patientSummary.html";
         $scope.curDate=new Date();
