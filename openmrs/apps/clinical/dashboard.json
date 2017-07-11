@@ -84,6 +84,7 @@
                     }
                 }
             },
+
             "nutritionalValues":{  
                 "translationKey":"DASHBOARD_TITLE_NUTRITIONAL_VALUES_KEY",
                 "type":"vitals",
@@ -262,6 +263,29 @@
                     "title":null,
                     "maximumNoOfVisits":8,
                     "groupByVisits":true
+                }
+            },
+            "FollowUpForm":{ 
+                "translationKey":"DASHBOARD_TITLE_FOLLOW_UP_FORM_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":17,
+                "dashboardConfig":{  
+                    "showDetailsButton":true,
+                    "conceptNames":[  
+                        "Follow up Form"
+                    ],
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{  
+                    "conceptNames":[  
+                        "Follow up Form"
+                    ],
+                    "numberOfVisits":5,
+                    "showDetailsButton":true,
+                    "pivotTable":{  
+
+                    }
                 }
             }
         }

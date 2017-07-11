@@ -115,6 +115,10 @@
                 "hideAbnormalButton" : true,
                 "allowAddMore": true
             },
+            "Follow up Form, Follow up Date":{
+              "allowFutureDates": true,
+              "disableAddNotes":true
+            },
             "Diabetes screening form":{
                "hideAbnormalButton" : true 
            },
