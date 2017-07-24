@@ -47,9 +47,6 @@
             "program": {
                 "patientInformation": {
                     "ageLimit": 100
-                },
-                "Program ID" : {
-                    "required" : true
                 }
             },
             "patientContext": {
