@@ -7,6 +7,17 @@
         "defaultDurationUnit": "Day(s)",
         "hideOrderSet" : true,
         "defaultInstructions": "As directed",
+        "hiddenFields": [
+          "quantity",
+          "dosingInstructions",
+          "durationUnits",
+          "quantityUnits",
+          "startDate",
+          "dosingTypeToggle",
+          "route",
+          "sos",
+          "additionalInstructions"
+        ],
         "frequencyDefaultDurationUnitsMap": [
           {
             "minFrequency": "1/7",
