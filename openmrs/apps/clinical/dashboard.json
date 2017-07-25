@@ -116,6 +116,7 @@
                 "displayOrder":7,
                 "dashboardConfig":{  
                     "showDetailsButton":true,
+                    "showTimeForObsGroup": true,
                     "conceptNames":[  
                         "vitals"
                     ],
@@ -125,6 +126,7 @@
                     "conceptNames":[  
                         "vitals"
                     ],
+                    "showTimeForObsGroup": true,
                     "numberOfVisits":5,
                     "showDetailsButton":true,
                     "pivotTable":{  
