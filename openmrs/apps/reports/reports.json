@@ -64,7 +64,7 @@
                           "ageGroupName": "Diagnosis Age Group",
                           "visitTypes":["OPD"],
                           "rowsGroupBy": ["header_concept_name","leaf_concept_name"],
-                         "columnsGroupBy": ["gender","agegroup_name"]
+                         "columnsGroupBy": ["agegroup_name","gender"]
                          }
                        },
                        { "name": "Morbidity Dead Count",
@@ -98,7 +98,7 @@
                         "ageGroupName": "Diagnosis Age Group",
                         "visitTypes":["IPD"],
                         "rowsGroupBy": ["header_concept_name","leaf_concept_name"],
-                       "columnsGroupBy": ["gender","agegroup_name"]
+                       "columnsGroupBy": ["agegroup_name","gender"]
                        }
                      },
                      { "name": "Morbidity Dead Count",
