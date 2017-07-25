@@ -48,6 +48,7 @@
             "defaultVisitType": "OPD",
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
             "showMiddleName": false,
+            "showLastName": true,
             "showBirthTime": false,
             "showCasteSameAsLastNameCheckbox": false,
             "printOptions": [
@@ -80,9 +81,9 @@
             },
             "fieldValidation" : {
                 "ContactNo" : {"pattern" : "[0-9]{7,11}", "errorMessage" : "Should be contain minimum 7 digits and maximum 11 digits"},
-                "familyName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
-                "givenName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
-                "middleName" : {"pattern" : "[a-zA-Z]{0,}", "errorMessage" : "Should contain characters"},
+                "familyName" : {"pattern" : "[a-zA-Z ]{0,50}", "errorMessage" : "Should contain characters(max length 50)"},
+                "givenName" : {"pattern" : "[a-zA-Z ]{0,50}", "errorMessage" : "Should contain characters(max length 50)"},
+                "middleName" : {"pattern" : "[a-zA-Z ]{0,50}", "errorMessage" : "Should contain characters(max length 50)"},
                 "FatherHusbandName" : {"pattern" : "[a-zA-Z ]{0,}", "errorMessage" : "Should contain characters"}
             },
             "patientSearchResults": {
