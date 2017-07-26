@@ -1,6 +1,6 @@
 select 
 patient_identifier.identifier as Identifier, 
-concat(pname.given_name,' ',pname.family_name) as 'Patient Name',
+concat(pname.given_name,' ',ifnull(pname.family_name,'')) as 'Patient Name',
 floor(datediff(now(),person.birthdate)/365) as 'Age',
 person.gender as Sex ,
 ifnull(NBStatus.name,'B') as 'Nationality',
