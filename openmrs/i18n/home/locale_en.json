@@ -10,5 +10,7 @@
     "MODULE_LABEL_ORDERS_KEY": "Orders",
     "MODULE_LABEL_PROGRAMS_KEY": "Programs",
     "MODULE_LABEL_IMPLEMENTER_INTERFACE_KEY": "Implementer Interface",
-    "MODULE_LABEL_ATOMFEED_CONSOLE_KEY": "AtomFeed Console"
+    "MODULE_LABEL_ATOMFEED_CONSOLE_KEY": "AtomFeed Console",
+    "LOGIN_PAGE_TITLE_TEXT":"",
+    "LOGIN_PAGE_HEADER_TEXT":"Welcome to ePIS"
 }

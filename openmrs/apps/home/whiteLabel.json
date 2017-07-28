@@ -1,11 +1,11 @@
 {
   "homePage": {
-    "header_text": "<b>WELCOME TO<br/>BAHMNI EMR & HOSPITAL SERVICE",
-    "logo": "/bahmni/images/bahmniLogoFull.png",
+    "header_text": "<b>WELCOME TO ePIS</b>",
+    "logo": "/bahmni_config/openelis/images/labLogo.jpg",
     "title_text": " "
   },
   "loginPage": {
-    "logo": "/bahmni/images/bahmniLogoFull.png",
+    "logo": "/bahmni_config/openelis/images/labLogo.jpg",
     "showHeaderText": true,
     "showTitleText": false
   },
