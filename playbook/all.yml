@@ -1,0 +1,13 @@
+- hosts: bahmni-emr
+  sudo: yes
+  roles:
+    - { role: bhutan-bahmniapps }
+  tags:
+    - bhutan-bahmniapps
+
+- hosts: bahmni-reports
+  sudo: yes
+  roles:
+    - { role: bhutan-reports }
+  tags:
+    - bhutan-reports

@@ -1,0 +1,9 @@
+- debug: msg="Bhamni Reports url is {{ bahmni_reports_url }}"
+
+- name: Install bahmni reports
+  yum: name={{ bahmni_reports_url }} state=present
+  when: bahmni_reports_url is defined
+
+
+- name: Start bahmni reports
+  service: name=bahmni-reports state=restarted enabled=yes
