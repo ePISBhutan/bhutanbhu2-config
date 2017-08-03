@@ -7,3 +7,4 @@
 
 - name: Start bahmni reports
   service: name=bahmni-reports state=restarted enabled=yes
+  when: not passive is defined
