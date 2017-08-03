@@ -75,6 +75,7 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
             BahmniObservation hParent = findWithoutUuid("Hypertension Form, BMI Section", observations, null);
             BahmniObservation nParent = find("Nutritional Values", observations, null);
             BahmniObservation dParent = find("Diabetes screening form", observations, null);
+            BahmniObservation fParent = find("Diabetes follow up form", observations, null);
 
             if (hParent != null && hParent.getConceptUuid().equals(newHeightObservation.getParentConceptUuid()))
                 parent = hParent;
@@ -82,6 +83,8 @@ public class BahmniObsValueCalculator implements ObsValueCalculator {
                 parent = nParent;
             else if (dParent != null && dParent.getConceptUuid().equals(newHeightObservation.getParentConceptUuid()))
                 parent = dParent;
+            else if (fParent != null && fParent.getConceptUuid().equals(newHeightObservation.getParentConceptUuid()))
+                parent = fParent;
 
             Double newheight = newHeightObservation.getValue() as Double
             Double newWeight = newWeightObservation.getValue() as Double
